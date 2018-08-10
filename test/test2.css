@@ -1,0 +1,103 @@
+body{
+  background: linear-gradient(to right, #3e8370 , #6eeacd);
+  width: 100%;
+}
+
+body,
+li,
+div,
+p{
+  font-family: 'Lato', sans-serif;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4dbea4;
+    height: 7vh;
+}
+
+ul.topnav li {float: left; display:table}
+
+ul.topnav li div {
+    display: table-cell;
+    vertical-align:middle;
+    color: white;
+    text-align: center;
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+    font-size:2vh;
+    height: 7vh;
+    padding-right:20px;
+    padding-left:20px;
+}
+
+ul.topnav li.right {float: right;}
+
+ul.topnav li.signin div span {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+ul.topnav li.signin div span:hover {
+  background-color: #dbf2ed;
+}
+
+ul.topnav li.drop div {
+  display:none;
+}
+
+ul.topnav li.signup div a {color:white}
+ul.topnav li.signup div a :hover {
+  border-bottom: solid 1px #fff;
+}
+
+.head-icon {
+  width: 15.4px;
+  height: 2vh;
+  position:inline;
+  margin-right:10px;
+}
+
+.header-logo {
+  width: 160px;
+  height: 55%;
+}
+
+@media screen and (max-height: 700px){
+    ul.topnav {
+      height: 49px;
+  }
+  
+  ul.topnav li div {
+      font-size: 14px;
+      height: 49px;
+  }
+  
+  .head-icon {
+    height: 14px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  ul.topnav li.logo div {
+    display: table-cell;
+    vertical-align:middle;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    height: 60px;
+    padding-top:10px;
+    padding-left:0;
+    float:left;
+  }
+  ul.topnav li.signin div{display:none}
+  ul.topnav li.signup div{display:none}
+  
+  
+  
+
+}

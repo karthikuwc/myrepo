@@ -1,0 +1,270 @@
+body{
+  background: linear-gradient(to right, #3e8370 , #6eeacd);
+  width: 100%;
+}
+
+body,
+li,
+a,
+p{
+  font-family: 'Lato', sans-serif;
+}
+
+/*Home Page Header*/
+.homepagetop {
+  width: 100vw;
+  height: 7vh;
+  background-color: #4dbea4;
+  position:relative;
+}
+
+.GlideSpot-Logo_coloured {
+  position:absolute;
+  width: 160px;
+  height: 55%;
+  top:22.5%;
+}
+
+.signin-btn {
+  right:20px;
+  position:absolute;
+  width: 117px;
+  height: 68%;
+  top:16%;
+  border: 1px solid white;
+  border-radius: 10px;
+  display:table;
+}
+
+.signin-btn:hover {
+  opacity:1;
+}
+
+.signin-btn-text {
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+
+
+.signup-text {
+  right:140px;
+  position:absolute;
+  width: 117px;
+  height: 68%;
+  top:16%;
+  display:table;
+}
+
+.head-icon {
+  width: 15.4px;
+  height: 18px;
+  position:inline;
+  margin-right:10px;
+}
+
+@media screen and (max-height: 700px){
+  .homepagetop {
+    height: 49px;
+  }
+  
+  .GlideSpot-Logo_coloured {
+    width: 125px;
+    height: 27px;
+  }
+  
+  .head-icon {
+    height: 14px;
+  }
+  
+  .signin-btn-text {
+    font-size: 14px;
+  }
+  
+}
+/*End */
+
+.navbar-collapse.collapse {
+  display: block!important;
+}
+
+.navbar-right {
+  float: right!important;
+}
+
+.navbar-default{
+  background: #ffffff;
+  border-top-width: 0 !important;
+  /* height: 6vh; */
+}
+
+.navbar-nav{
+  display: inline-block;
+  float:none;
+  text-align: center;
+}
+
+#navbar{
+  float: none;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #4d4d4d;
+}
+
+.col-centered{
+  width: 380px;
+  height: 355px;
+  margin-top: 20vh;
+  background-color: #fff;
+  text-align: center;
+}
+
+.page-1{
+	width:21px;
+	height: 14px;
+}
+
+.page-2{
+	width:80px;
+	height: 80px;
+	margin-top: 5%;
+}
+
+.btn{
+  border: none;
+  font-family: 'Lato', sans-serif;
+  background-color: #f98470;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-group a{
+  text-align:center;
+}
+
+.input-group{
+  margin: 4.5% auto;
+}
+
+.sign-up{
+    float: none;
+    display: inline-block;
+    margin-top: 8.4%;
+    align-content: center;
+    font-size: 79px;
+    color: #4dbea4;
+  }
+
+#sign-in{
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+#sign-in a{
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #fff;
+}
+
+#sign-in a:hover{
+  border-bottom: solid 1px #fff;
+}
+
+.link {
+  text-decoration: none !important;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#footer{
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  padding-top: 4.5%;
+  right: 0;
+  left:0;
+  bottom: 0;
+  padding-bottom: 2.2%;
+  width: 100%;
+}
+
+#footer  .text-center a {
+  font-size: 2vh;
+  color: white;
+}
+
+#footer .text-center a:hover {
+  border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+#footer .text-center a:not(:first-child) {
+  margin-left: 40px;
+}
+
+#footer .text-center a:not(:last-child):hover{
+  border-bottom: solid 1px #fff;
+}
+
+@media screen and (max-width: 767px), (max-height: 730px){
+  .col-centered {
+    width: 340px;
+    height: 317px;
+  }
+
+  .btn {
+    width: 310px !important;
+	font-size: 14px !important;
+  }
+
+  #sign-in a {
+	font-size: 11px;
+  }
+
+  .panel-login>.panel-heading a{
+	font-size: 13px;
+  }
+}
+
+@media screen and (max-height: 700px){
+  #footer{
+    position: relative;
+    padding-top: 4%;
+  }
+  
+  #footer .text-center a{
+	font-size: 12px;
+  }
+}

@@ -1,0 +1,15 @@
+version: 0.1
+
+phases:
+    pre_build:
+        commands:
+            - npm install
+    build:
+        commands:
+            - npm run webpack
+            - mkdir build
+            - mv styles build
+            - mv pages build
+            - mv dist build
+            - mv resources build
+            - aws s3 sync ./build s3://sign-up-integration/

@@ -1,0 +1,64 @@
+sudo -H pip install ipython
+npm install -g local-web-server
+sudo pip install boto3
+sudo pip install pymysql
+nvm install node
+git config credential.helper store
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+npm install npm@latest -g
+
+npm install --save react@16.2.0 react-dom@16.2.0 
+npm install --save-dev webpack@4.2.0  webpack-cli@2.0.13
+npm install --save-dev babel-core@6.26.0 babel-loader@7.1.4 babel-preset-react@6.24.1
+npm install --save-dev babel-jest@22.4.3 enzyme@3.3.0 jest@22.4.3 babel-preset-env@1.6.1 
+enzyme-adapter-react-16@1.1.1 react-test-renderer@16.2.0
+npm install --save react-router-dom
+
+npm install --save-dev (dependencies needed to build)
+npm install --save (dependencies needed to run)
+
+npm init
+
+npm install (generate node_modules folder)
+
+aws lambda create-function --region ap-southeast-1 \
+--function-name   CreateTableAddRecordsAndRead  \
+--zip-file fileb://app.zip \
+--role arn:aws:iam::778513204741:role/aws-lambda-rds-vpc-2018 \
+--handler app.handler \
+--runtime python3.6 \
+--vpc-config SubnetIds=subnet-8a4dbfd3,subnet-69fdfa0e,subnet-e35166aa,SecurityGroupIds=sg-014dc0aaabb9412b8 \
+--profile default
+
+aws lambda invoke \
+--function-name CreateTableAddRecordsAndRead  \
+--region ap-southeast-1 \
+--profile default \
+output.txt  
+
+mysql -h mydbinstance.cscuzqj5v8zy.ap-southeast-1.rds.amazonaws.com -P 3306 -u Administrator -p
+
+# For cognito
+npm install --save-dev webpack json-loader
+npm install --save amazon-cognito-identity-js
+npm install --save aws-sdk
+npm install --save amazon-cognito-identity-js-node
+npm install --save node-fetch 
+
+aws lambda get-function --function-name dbfunction
+
+
+aws cognito-idp initiate-auth --auth-flow USER_PASSWORD_AUTH --client-id 3nv8vmiag7qc7n5oq5hhh6fg57 --auth-parameters USERNAME=karthik,PASSWORD=Password123
+
+git clone https://github.com/aws/aws-codebuild-docker-images.git
+cd aws-codebuild-docker-images
+cd ubuntu/nodejs/8.11.0
+docker build -t aws/codebuild/nodejs:8.11.0 .
+docker pull amazon/aws-codebuild-local:latest --disable-content-trust=false
+docker run -it -v /var/run/docker.sock:/var/run/docker.sock -e "IMAGE_NAME=aws/codebuild/nodejs:8.11.0" -e "ARTIFACTS=/home/ec2-user/environment/artifacts" -e "SOURCE=/home/ec2-user/environment/signUpInt" amazon/aws-codebuild-local
+./codebuild_build.sh -i aws/codebuild/nodejs:8.11.0 -a /home/ec2-user/environment/artifacts -s /home/ec2-user/environment/signUpInt -c

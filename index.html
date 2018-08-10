@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <title>GlideX</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
+    <!--<link rel="stylesheet" href="build/css/intlTelInput.css">-->
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+      $(function() {
+
+        $('#email-form-link').click(function(e) {
+		    $("#email-form").delay(100).fadeIn(100);
+ 		    $("#mobile-form").fadeOut(100);
+		    $('#mobile-form-link').removeClass('active');
+		    $(this).addClass('active');
+		    e.preventDefault();
+	    });
+	    $('#mobile-form-link').click(function(e) {
+		    $("#mobile-form").delay(100).fadeIn(100);
+ 		    $("#email-form").fadeOut(100);
+		    $('#email-form-link').removeClass('active');
+		    $(this).addClass('active');
+		    e.preventDefault();
+	    });
+
+      });
+    </script>
+</head>
+
+<body>
+  
+  <div id="signUp"></div>
+    
+    
+  <script type="text/javascript" src="../dist/signUp.js"></script>
+
+  <!-- Load jQuery from CDN so can run demo immediately -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
